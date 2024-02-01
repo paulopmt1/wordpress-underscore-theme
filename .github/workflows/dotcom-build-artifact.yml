@@ -28,10 +28,12 @@ jobs:
     - name: Install node dependencies
       run: npm install
 
-    - name: Build the website
-      run: npm run bundle
+    # Your custom commands here
+    # - name: Build website
+    #   run: npm run bundle
 
-    - uses: actions/upload-artifact@v4
+    - name: Upload the artifact
+      uses: actions/upload-artifact@v4
       with:
         name: repository-artifact
         path: |
