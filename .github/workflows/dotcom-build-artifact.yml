@@ -23,7 +23,7 @@ jobs:
     - name: Install NPM dependencies and Build theme
       uses: actions/setup-node@v4
       run: npm install
-      run: npm run bundle
+      run: npm bundle
 
     - uses: actions/upload-artifact@v4
       with:
