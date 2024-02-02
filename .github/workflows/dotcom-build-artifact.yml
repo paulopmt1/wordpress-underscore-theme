@@ -36,14 +36,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: repository-artifact
-        path: ../_s.zip
-
-    # - name: Upload the artifact
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: repository-artifact
-    #     path: |
-    #       .
-    #       !node_modules
-    #       !.github
-    #       !.git
+        path: buildedtheme.zip
