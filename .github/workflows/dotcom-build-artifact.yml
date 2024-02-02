@@ -29,7 +29,6 @@ jobs:
     - name: Install node dependencies
       run: npm install
 
-    Your custom commands here
     - name: Build website
       run: npm run bundle
 
