@@ -19,6 +19,7 @@ jobs:
       uses: php-actions/composer@v6
       with:
         dev: no
+        php_version: 8.0
 
     - name: Setup node 16
       uses: actions/setup-node@v4
@@ -28,16 +29,22 @@ jobs:
     - name: Install node dependencies
       run: npm install
 
-    # Your custom commands here
-    # - name: Build website
-    #   run: npm run bundle
+    Your custom commands here
+    - name: Build website
+      run: npm run bundle
 
     - name: Upload the artifact
       uses: actions/upload-artifact@v4
       with:
         name: repository-artifact
-        path: |
-          .
-          !node_modules
-          !.github
-          !.git
+        path: ../_s.zip
+
+    # - name: Upload the artifact
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: repository-artifact
+    #     path: |
+    #       .
+    #       !node_modules
+    #       !.github
+    #       !.git
